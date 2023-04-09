@@ -1,27 +1,24 @@
 # Pesticidi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Informacioni sistem za praćenje prinosa poljoprivrednog dobra se sastoji od nekoliko korisnika.
+Korisnik(Ime, Prezime, Email, DatumRođenja, BrojTelefona, Pol, KorisničkoIme, Password)
+ima mogućnost unosa i upravljanja informacija o svojoj poljoprivrednoj imovini (parcele(broj parcele, površina)
+koje poseduje, na svakoj parceli plastenike i vrtove, za svaki plastenik ili vrt koja poljoprivredna dobra je
+posadio).
+Svako poljoprivredno dobro se karakteriše Id, Nazivom, Sortom, ŽivotniVek(u godinama), DatumSadnice,
+VremeSazrevanja(vremenski izraženo u godinama kada počinje da daje plod od datuma sađenja), minimalni i
+maksimalni potencijal davanja  godišnje kao i listu pesticida koje se smeju prskati na njemu.
+Korisnik može pregledati koliki je očekivani doprinos od neke voćke za period koji izabere. Osim za jednu
+voćku korisnik može pregledati i za izabrani vrt ili plastenik, kao i za veći broj izabranih vrtova i
+plastenika.
+Korisnik može poslati zahtev za subvencije za kupovinu pesticida gde će navesti koje pesticide
+želi da nabavi. Taj zahtev obrađuje službenik.
+Službenik (Ime, Prezime, Email, DatumRođenja, BrojTelefona, StručnaSprema, KorisničkoIme, Password) može da:
+- potvrdi registrovane korisnike.
+- pregleda postojeće korisnike i filtrira listu po (ime i prezime, datumRođenja, Pol)
+- pregleda pristigle zahteve i oceni ih kao prihvaćene ili odbijene. Pristigli zahtevi treba da budu
+obojeni zelenom bojom ako su ispravni, odnosno crvenom ako ima greška (greška bi bila da korisnik traži
+pesticid a ni jedno njegovo poljoprivredno dobro ne sme da koristi taj pesticid). Tom prilikom službenik
+ovog korisnika označava kao nepouzadnog i njemu se postavlja zabrana apliciranja na godinu dana od dana
+prijave.
+- unosi, pregleda, menja i briše listu pesticida i sorti koje mogu da koriste taj pesticid.
