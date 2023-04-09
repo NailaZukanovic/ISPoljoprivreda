@@ -22,3 +22,5 @@ pesticid a ni jedno njegovo poljoprivredno dobro ne sme da koristi taj pesticid)
 ovog korisnika označava kao nepouzadnog i njemu se postavlja zabrana apliciranja na godinu dana od dana
 prijave.
 - unosi, pregleda, menja i briše listu pesticida i sorti koje mogu da koriste taj pesticid.
+
+![image](https://user-images.githubusercontent.com/86067688/230790538-f2d4b530-e320-4c17-8019-186ef4e1eb61.png)
