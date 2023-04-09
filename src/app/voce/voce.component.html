@@ -1,0 +1,18 @@
+<h2>Voće</h2>
+
+<form [formGroup]="voceForm" (ngSubmit)="izracunajDoprinos()">
+  <label for="vrsta">Vrsta voćke:</label>
+  <input type="text" id="vrsta" formControlName="vrsta" required>
+
+  <label for="datumOd">Datum od:</label>
+  <input type="date" id="datumOd" formControlName="datumOd" required>
+
+  <label for="datumDo">Datum do:</label>
+  <input type="date" id="datumDo" formControlName="datumDo" required>
+
+  <button type="submit">Izračunaj doprinos</button>
+</form>
+
+<div *ngIf="doprinos !== undefined">
+  <p>Očekivani doprinos: {{ doprinos }} kg</p>
+</div>

@@ -1,0 +1,29 @@
+<h1>Zahtev za subvencije za kupovinu pesticida</h1>
+
+  <form [formGroup]="pesticidiForm" (ngSubmit)="posaljiZahtev()">
+    <label>
+      Ime:
+      <input type="text" formControlName="ime" required>
+    </label>
+    <label>
+      Prezime:
+      <input type="text" formControlName="prezime" required>
+    </label>
+    <label>
+      Email:
+      <input type="email" formControlName="email" required>
+    </label>
+    <label>
+      Telefon:
+      <input type="tel" formControlName="telefon" required>
+    </label>
+    <label>
+      Naziv pesticida:
+      <input type="text" formControlName="nazivPesticida" required>
+    </label>
+    <label>
+      Količina:
+      <input type="number" formControlName="kolicina" required>
+    </label>
+    <button type="submit">Pošalji zahtev</button>
+  </form>

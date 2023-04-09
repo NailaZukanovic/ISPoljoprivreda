@@ -1,0 +1,31 @@
+<h1>Moja poljoprivredna imovina</h1>
+
+<!-- Dodavanje nove parcele -->
+<form (submit)="dodajParcelu()">
+  <label>
+    Broj parcele:
+    <input type="text" [(ngModel)]="brojParcele" required>
+  </label>
+  <label>
+    Površina (u ha):
+    <input type="number" step="0.01" [(ngModel)]="povrsina" required>
+  </label>
+  <button type="submit">Dodaj parcelu</button>
+</form>
+
+<!-- Prikaz svih parcela -->
+<ng-container *ngIf="poljoprivrednaImovina.length > 0; else nemaParcela">
+  <h2>Moje parcele</h2>
+  <ul>
+    <li *ngFor="let parcela of poljoprivrednaImovina; let i = index">
+      <p><strong>Broj parcele:</strong> {{ parcela.brojParcele }}</p>
+      <p><strong>Površina:</strong> {{ parcela.povrsina }} ha</p>
+      <button (click)="obrisiParcelu(i)">Obriši parcelu</button>
+      <button [routerLink]="['/', 'poljoprivredna-imovina', 'parcela', i]">Pregledaj detalje</button>
+    </li>
+  </ul>
+</ng-container>
+
+<ng-template #nemaParcela>
+  <p>Trenutno nemate nijednu parcelu.</p>
+</ng-template>
